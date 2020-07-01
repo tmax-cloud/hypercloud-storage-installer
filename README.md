@@ -24,6 +24,9 @@
 - Then, a directory is created on the current path with the given inventory name. Inside of the directory, two directories are created named as rook and cdi.
   - `./myInventory/rook/*.yaml` are yaml files for Rook-Ceph installation
   - `./myInventory/cdi/*.yaml` are yaml files for KubeVirt-CDI installation
+- Please note that docker registry is not specified in all yaml files. You can replace {registry_endpoint} with your private docker registry with registry.sh.
+  - ./registry.sh <registry_ip>:<registry_port> {inventory_name}
+  - Ex) ./registry.sh 192.168.50.207:5000 test
 - Please note that all the generated yamls are just sample. Go through each files and change values to suit your host environment.
   - <strong> Do not modify the name of folders and files. </strong>
   - Take a look at [rook documentation](https://rook.github.io/docs/rook/v1.3/ceph-cluster-crd.html) before modify each fields under `./myInventory/rook/` path
