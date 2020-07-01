@@ -41,6 +41,8 @@
     ```
 
     - This command will execute various test cases to verify that hypercloud-storage is installed properly.
+    - It will take up to 15 minutes to complete the test
+    - CDI test cases are not able to run in private network environment, without public internet access.
 
 ## Uninstall
 
